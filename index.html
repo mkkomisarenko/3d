@@ -18,10 +18,10 @@
         :root {
             --bg-color: #0b0c10;
             --text-color: #c5c6c7;
-            --accent-color: #66fcf1;
+            --accent-color: #39FF14;
             --dark-accent: #1f2833;
             --pure-white: #ffffff;
-            --glow-color: rgba(102, 252, 241, 0.3);
+            --glow-color: rgba(57, 255, 20, 0.3);
         }
 
         * {
@@ -51,9 +51,9 @@
         }
 
         @keyframes pulseGlow {
-            0% { box-shadow: 0 0 15px rgba(102, 252, 241, 0.15); }
-            50% { box-shadow: 0 0 30px rgba(102, 252, 241, 0.4); }
-            100% { box-shadow: 0 0 15px rgba(102, 252, 241, 0.15); }
+            0% { box-shadow: 0 0 15px rgba(57, 255, 20, 0.15); }
+            50% { box-shadow: 0 0 30px rgba(57, 255, 20, 0.4); }
+            100% { box-shadow: 0 0 15px rgba(57, 255, 20, 0.15); }
         }
 
         /* ГОЛОВНИЙ ЕКРАН З ЖИВИМ ВІДЕОФОНОМ (ЕФЕКТ MTI.UA) */
@@ -129,14 +129,14 @@
             font-size: 1.2rem;
             cursor: pointer;
             text-decoration: none;
-            box-shadow: 0 0 15px rgba(102, 252, 241, 0.2);
+            box-shadow: 0 0 15px rgba(57, 255, 20, 0.2);
             animation: bounce 2s infinite;
         }
 
         .scroll-down-btn:hover {
             background: var(--accent-color);
             color: var(--bg-color);
-            box-shadow: 0 0 25px rgba(102, 252, 241, 0.6);
+            box-shadow: 0 0 25px rgba(57, 255, 20, 0.6);
         }
 
         @keyframes bounce {
@@ -178,16 +178,16 @@
             background: #000;
             border-radius: 16px;
             overflow: hidden;
-            border: 1px solid rgba(102, 252, 241, 0.25);
+            border: 1px solid rgba(57, 255, 20, 0.25);
             margin-bottom: 80px;
-            box-shadow: 0 0 20px rgba(102, 252, 241, 0.15);
+            box-shadow: 0 0 20px rgba(57, 255, 20, 0.15);
             animation: pulseGlow 4s infinite ease-in-out;
         }
 
         .media-container:hover {
             transform: translateY(-5px);
             border-color: var(--accent-color);
-            box-shadow: 0 0 30px rgba(102, 252, 241, 0.3);
+            box-shadow: 0 0 30px rgba(57, 255, 20, 0.3);
         }
 
         .media-wrapper {
@@ -217,11 +217,11 @@
         }
 
         .spec-card {
-            background-color: var(--dark-accent);
+            background-color: transparent;
             padding: 35px 25px;
             border-radius: 12px;
             text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(57, 255, 20, 0.2);
             position: relative;
             overflow: hidden;
         }
@@ -239,9 +239,7 @@
         }
 
         .spec-card:hover {
-            background-color: #242f3d;
-            border-color: rgba(102, 252, 241, 0.3);
-            transform: translateY(-5px);
+            border-color: rgba(57, 255, 20, 0.3);
         }
 
         .spec-card:hover::before {
@@ -252,7 +250,7 @@
             font-size: 2.5rem;
             color: var(--accent-color);
             margin-bottom: 15px;
-            text-shadow: 0 0 10px rgba(102, 252, 241, 0.3);
+            text-shadow: 0 0 10px rgba(57, 255, 20, 0.3);
         }
 
         .spec-card h3 {
@@ -328,7 +326,7 @@
             padding: 60px 40px;
             background: linear-gradient(135deg, var(--dark-accent) 0%, #151b23 100%);
             border-radius: 16px;
-            border: 1px solid rgba(102, 252, 241, 0.1);
+            border: 1px solid rgba(57, 255, 20, 0.1);
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
         }
 
@@ -358,14 +356,14 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             border-radius: 50px;
-            box-shadow: 0 0 15px rgba(102, 252, 241, 0.15);
+            box-shadow: 0 0 15px rgba(57, 255, 20, 0.15);
             cursor: pointer;
         }
 
         .btn-contact:hover {
             background: var(--accent-color);
             color: var(--bg-color);
-            box-shadow: 0 0 30px rgba(102, 252, 241, 0.6);
+            box-shadow: 0 0 30px rgba(57, 255, 20, 0.6);
             transform: scale(1.05);
         }
 
@@ -391,7 +389,7 @@
             max-width: 450px;
             width: 90%;
             text-align: center;
-            box-shadow: 0 0 30px rgba(102, 252, 241, 0.3);
+            box-shadow: 0 0 30px rgba(57, 255, 20, 0.3);
             position: relative;
         }
 
@@ -452,30 +450,14 @@
         <h1>Komisarenko.com</h1>
         <p>Дизайнерський простір для вашого комфортного життя. Пройдіть інтерактивний 3D-тур нашою квартирою.</p>
         
-        <!-- Кнопка плавного скролу до контенту -->
-        <a href="#content" class="scroll-down-btn">
+        <!-- Кнопка відкриття 3D туру -->
+        <button onclick="showTourModal()" class="scroll-down-btn" style="border: none; background: transparent; cursor: pointer;">
             <i class="fa-solid fa-arrow-down"></i>
-        </a>
-    </section>
-
-    <!-- ОСНОВНИЙ КОНТЕНТ САЙТУ -->
-    <div class="container" id="content">
-
-        <!-- СЕКЦІЯ З 3D МОДЕЛЛЮ (Оптимізована під iOS/Safari) -->
-        <h2 class="section-title">Інтерактивний 3D-Тур</h2>
-        <div class="media-container">
-            <div class="media-wrapper">
-                <!-- 
-                  Додано параметри &play=1&qs=1 для автоматичного старту туру всередині іфрейму 
-                  та loading="lazy" для безпечного фокусування на мобільних пристроях.
-                -->
-                <iframe src="https://my.matterport.com/show/?m=QXBAjFcQCyr&play=1&qs=1" frameborder="0" allowfullscreen allow="autoplay; fullscreen; web-share; xr-spatial-tracking;" loading="lazy"></iframe>
-            </div>
-        </div>
+        </button>
 
         <!-- Ключові характеристики -->
-        <h2 class="section-title">Основні Параметри</h2>
-        <div class="specs-grid">
+        <h2 class="section-title" style="margin-top: 40px; margin-bottom: 30px;">Основні Параметри</h2>
+        <div class="specs-grid" style="max-width: 1200px; margin: 0 auto; padding: 0 20px; position: relative; z-index: 10;">
             <div class="spec-card">
                 <i class="fa-solid fa-maximize"></i>
                 <h3>74 м²</h3>
@@ -497,6 +479,11 @@
                 <p>Преміум ремонт</p>
             </div>
         </div>
+
+    </section>
+
+    <!-- ОСНОВНИЙ КОНТЕНТ САЙТУ -->
+    <div class="container" id="content">
 
         <!-- Детальний опис -->
         <div class="details-box">
@@ -521,6 +508,16 @@
 
     </div>
 
+    <!-- Модалка 3D туру -->
+    <div id="tourModal" class="modal">
+        <div style="background: var(--dark-accent); border-radius: 16px; border: 1px solid var(--accent-color); width: 95%; max-width: 1200px; position: relative; box-shadow: 0 0 30px rgba(57, 255, 20, 0.3);">
+            <span class="close-btn" onclick="closeTourModal()" style="z-index: 1001;">&times;</span>
+            <div style="position: relative; padding-bottom: 56.25%; height: 0; width: 100%; border-radius: 16px; overflow: hidden;">
+                <iframe src="https://my.matterport.com/show/?m=QXBAjFcQCyr" frameborder="0" allowfullscreen allow="autoplay; fullscreen; web-share; xr-spatial-tracking;" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+            </div>
+        </div>
+    </div>
+
     <!-- Модалка контактів -->
     <div id="contactModal" class="modal">
         <div class="modal-content">
@@ -541,6 +538,14 @@
     </div>
 
     <script>
+        function showTourModal() {
+            document.getElementById('tourModal').style.display = 'flex';
+        }
+
+        function closeTourModal() {
+            document.getElementById('tourModal').style.display = 'none';
+        }
+
         function showModal() {
             document.getElementById('contactModal').style.display = 'flex';
         }
@@ -550,9 +555,13 @@
         }
 
         window.onclick = function(event) {
-            const modal = document.getElementById('contactModal');
-            if (event.target == modal) {
-                modal.style.display = 'none';
+            const tourModal = document.getElementById('tourModal');
+            const contactModal = document.getElementById('contactModal');
+            if (event.target == tourModal) {
+                tourModal.style.display = 'none';
+            }
+            if (event.target == contactModal) {
+                contactModal.style.display = 'none';
             }
         }
     </script>
