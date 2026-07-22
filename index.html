@@ -217,13 +217,14 @@
         }
 
         .spec-card {
-            background-color: var(--dark-accent);
+            background-color: rgba(31, 40, 51, 0.4);
             padding: 35px 25px;
             border-radius: 12px;
             text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(57, 255, 20, 0.2);
             position: relative;
             overflow: hidden;
+            backdrop-filter: blur(10px);
         }
 
         .spec-card::before {
@@ -457,14 +458,9 @@
             <i class="fa-solid fa-arrow-down"></i>
         </button>
 
-    </section>
-
-    <!-- ОСНОВНИЙ КОНТЕНТ САЙТУ -->
-    <div class="container" id="content">
-
         <!-- Ключові характеристики -->
-        <h2 class="section-title">Основні Параметри</h2>
-        <div class="specs-grid">
+        <h2 class="section-title" style="margin-top: 40px; margin-bottom: 30px;">Основні Параметри</h2>
+        <div class="specs-grid" style="max-width: 1200px; margin: 0 auto; padding: 0 20px; position: relative; z-index: 10;">
             <div class="spec-card">
                 <i class="fa-solid fa-maximize"></i>
                 <h3>74 м²</h3>
@@ -486,6 +482,11 @@
                 <p>Преміум ремонт</p>
             </div>
         </div>
+
+    </section>
+
+    <!-- ОСНОВНИЙ КОНТЕНТ САЙТУ -->
+    <div class="container" id="content">
 
         <!-- Детальний опис -->
         <div class="details-box">
