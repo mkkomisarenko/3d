@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -115,7 +115,7 @@
             animation: fadeInUp 1.2s ease-out;
         }
 
-        /* Кнопка скролу вниз */
+        /* Botón de desplazamiento hacia abajo */
         .scroll-down-btn {
             background: transparent;
             border: 2px solid var(--accent-color);
@@ -367,7 +367,7 @@
             transform: scale(1.05);
         }
 
-        /* Модалка */
+        /* Ventana modal */
         .modal {
             display: none;
             position: fixed;
@@ -467,31 +467,31 @@
 
     <!-- Мовна кнопка -->
     <div class="language-switch">
-        <a href="index-es.html">
+        <a href="index.html">
             <i class="fa-solid fa-globe"></i> Español
         </a>
     </div>
 
-    <!-- ГОЛОВНА СЕКЦІЯ З ВІДЕОФОНОМ (ЕФЕКТ MTI.UA) -->
+    <!-- SECCION PRINCIPAL CON VIDEO DE FONDO (EFECTO MTI.UA) -->
     <section class="hero">
         <div class="hero-overlay"></div>
         
-        <!-- Фонове відео завантажується локально -->
+        <!-- Video de fondo se carga localmente -->
         <video class="hero-video" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80">
             <source src="Background.mp4" type="video/mp4">
             Ваш браузер не підтримує відео.
         </video>
 
-        <h1>Квартира в Benidorm<br>набережна Poniente</h1>
-        <p>Дизайнерський простір для вашого комфортного життя. Пройдіть інтерактивний 3D-тур нашою квартирою.</p>
+        <h1>Apartamento en Benidorm<br>Paseo Marítimo Poniente</h1>
+        <p>Espacio de diseño para tu vida cómoda. Haz un recorrido interactivo en 3D por nuestro apartamento.</p>
         
-        <!-- Кнопка відкриття 3D туру -->
+        <!-- Botón para abrir tour en 3D -->
         <button onclick="showTourModal()" class="scroll-down-btn" style="border: none; background: transparent; cursor: pointer;">
             <i class="fa-solid fa-cube"></i>
         </button>
 
-        <!-- Ключові характеристики -->
-        <h2 class="section-title" style="margin-top: 40px; margin-bottom: 30px;">Основні Параметри</h2>
+        <!-- Características clave -->
+        <h2 class="section-title" style="margin-top: 40px; margin-bottom: 30px;">Parámetros Principales</h2>
         <div class="specs-grid" style="max-width: 1200px; margin: 0 auto; padding: 0 20px; position: relative; z-index: 10;">
             <div class="spec-card">
                 <i class="fa-solid fa-maximize"></i>
@@ -520,11 +520,11 @@
     <!-- ОСНОВНИЙ КОНТЕНТ САЙТУ -->
     <div class="container" id="content">
 
-        <!-- Детальний опис -->
+        <!-- Descripción detallada -->
         <div class="details-box">
             <h3><i class="fa-solid fa-building-circle-check"></i> Опис та переваги:</h3>
-            <p>Здається в оренду стильна та простора квартира з абсолютно новим дизайнерським ремонтом у стилі мінімалізму. Простір зоновано максимально ергономічно: затишна ізольована спальня з ортопедичним матрацом і місткою гардеробною системою, а також світла вітальня-студія, об'єднана з сучасною кухнею.</p>
-            <p><strong>Оснащення:</strong> Автономне опалення, система «розумний дом», кондиціонери в кожній кімнаті, посудомийна та пральна машини преміум-серій, високошвидкісний гігабітний інтернет (оптоволокно, що працює автономно під час блекаутів). Будинок із закритою територією, підземним паркінгом та цілодобовою охороною.</p>
+            <p>Se alquila un apartamento elegante y espacioso con una renovación de diseño completamente nueva en estilo minimalista. El espacio está zonificado de la manera más ergonómica: un dormitorio cómodo y aislado con colchón ortopédico y sistema de guardarropa amplio, así como una sala de estar-estudio luminosa, combinada con una cocina moderna.</p>
+            <p><strong>Equipamiento:</strong> Calefacción autónoma, sistema de "casa inteligente", aire acondicionado en cada habitación, lavavajillas y lavadora de series premium, internet de gigabit de alta velocidad (fibra óptica que funciona de forma autónoma durante apagones). Edificio con territorio cerrado, aparcamiento subterráneo y seguridad 24 horas.</p>
             
             <ul>
                 <li><i class="fa-solid fa-shield-halved"></i> Консьєрж та Охорона 24/7</li>
@@ -534,7 +534,7 @@
             </ul>
         </div>
 
-        <!-- Заклик до дії -->
+        <!-- Llamada a la acción -->
         <div class="cta-section">
             <h2>Зацікавив об'єкт?</h2>
             <p>Забронюйте час для особистого або онлайн-перегляду квартири вже сьогодні.</p>
@@ -543,7 +543,7 @@
 
     </div>
 
-    <!-- Модалка 3D туру -->
+    <!-- Ventana modal del tour 3D -->
     <div id="tourModal" class="modal">
         <div style="background: var(--dark-accent); border-radius: 16px; border: 1px solid var(--accent-color); width: 95%; max-width: 1200px; position: relative; box-shadow: 0 0 30px rgba(57, 255, 20, 0.3);">
             <span class="close-btn" onclick="closeTourModal()" style="z-index: 1001;">&times;</span>
@@ -553,7 +553,7 @@
         </div>
     </div>
 
-    <!-- Модалка контактів -->
+    <!-- Ventana modal de contacto -->
     <div id="contactModal" class="modal">
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal()">&times;</span>
